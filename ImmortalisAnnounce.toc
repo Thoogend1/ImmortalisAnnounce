@@ -1,0 +1,8 @@
+## Interface: 80000
+## Author: Kabandhur / Sherrim / Zelcandor 
+## Version: 8.0.1
+## Title: |cff7fff7fImmortalis Announce|r
+## Notes: [v8.0.1] Interrupt, Dispel and Spellsteal announce addon.
+
+
+ImmortalisAnnounce.lua
