@@ -1,4 +1,4 @@
-## Interface: 80000
+## Interface: 90001
 ## Author: Semuel
 ## Version: 9.0.1
 ## Title: |cff7fff7fImmortalis Announce|r
