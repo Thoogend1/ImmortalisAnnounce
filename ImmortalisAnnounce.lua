@@ -1,3 +1,10 @@
+-------IA v9.0.1---------
+-------------------------
+-- OutputChannelConfig --
+-- msgType = "SAY";
+---- End of Settings ----
+-------------------------
+
 local UnitGUID = UnitGUID;
 local GetNumRaidMembers = GetNumRaidMembers;
 local GetNumPartyMembers = GetNumPartyMembers;
