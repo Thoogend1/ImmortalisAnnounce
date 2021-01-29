@@ -1,7 +1,7 @@
--------IA v9.0.1---------
+-------IA v9.0.3---------
 -------------------------
 -- OutputChannelConfig --
--- msgType = "SAY";
+---- msgType = "SAY"; ---
 ---- End of Settings ----
 -------------------------
 
@@ -48,7 +48,7 @@ interr:SetScript("OnEvent", function(self, event, ...)
             local interruptingSpell = GetSpellLink(spellId);
             local interruptedSpell = GetSpellLink(extraSpellID);
             local msg = "";
-            if (IsInGroup()) then
+			if (IsInGroup()) then
                 msg = interruptingSpell.." interrupted "..destIcon..destName.."'s "..interruptedSpell.."!";
             else
                 local destStr = format(TEXT_MODE_A_STRING_SOURCE_UNIT, "", destGUID, destName, destName); -- empty icon, destRaidFlags = 0 when solo
