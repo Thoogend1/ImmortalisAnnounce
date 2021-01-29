@@ -1,8 +1,8 @@
-## Interface: 90001
+## Interface: 90002
 ## Author: Semuel
-## Version: 9.0.3
+## Version: 9.0.2
 ## Title: |cff7fff7fImmortalis Announce|r
-## Notes: [v9.0.3] Interrupt announce addon.
+## Notes: [v9.0.2 Interrupt announce addon.
 ## With many thanks to Kabandhur, Sherrim and Zelcandor for their work on previous versions
 
 ImmortalisAnnounce.lua
