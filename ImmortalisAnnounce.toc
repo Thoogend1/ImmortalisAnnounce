@@ -1,4 +1,4 @@
-## Interface: 90100
+## Interface: 90105
 ## Author: Semuel
 ## Version: 9.1.5
 ## Title: [Immortalis Announce]
