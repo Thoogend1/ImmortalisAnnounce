@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 ## Interface: 90205
 ## Author: Semuel
 ## Version: 9.2.5
 ## Title: [Immortalis Announce]
 ## Notes: [v9.2.5 Interrupt announce addon]
-=======
-## Interface: 90200
-## Author: Semuel
-## Version: 9.2.0
-## Title: [Immortalis Announce]
-## Notes: [v9.2.0 Interrupt announce addon]
->>>>>>> 01e2448a08ce16fb1a9cc1d03daf1d8418f5e6ff
 ## With many thanks to Kabandhur, Sherrim and Zelcandor for their work on previous versions
 
 ImmortalisAnnounce.lua
