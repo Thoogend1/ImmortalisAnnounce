@@ -10,6 +10,8 @@ local GetNumRaidMembers = GetNumRaidMembers;
 local GetNumPartyMembers = GetNumPartyMembers;
 local IsInInstance = IsInInstance;
 local InstanceType = "none"
+
+-- This maps the possible responses for GetRaidIcon to the right mark assigned to the player.
 local RaidIconMaskToIndex =
 {
 	[COMBATLOG_OBJECT_RAIDTARGET1] = 1,
@@ -57,7 +59,7 @@ interr:SetScript("OnEvent", function(self, event, ...)
 
             if (GetNumGroupMembers() > 0) then
                 local msgType = "PARTY";
-                if ((IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE)) and (InstanceType == "party" or InstanceType == "raid" or InstanceType == "scenario")) then -- Dungeon/Raid Finder/Scenario. 
+                if ((IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE)) and (InstanceType == "party" or InstanceType == "raid" or InstanceType == "scenario")) then -- Dungeon/Raid (Finder)/Scenario. 
 					-- You can add InstanceType == "pvp" to include battlegrounds
                     msgType = "INSTANCE_CHAT";
                 elseif (IsInRaid(LE_PARTY_CATEGORY_HOME)) then
