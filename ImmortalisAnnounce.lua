@@ -1,4 +1,4 @@
--------IA v10.2.6---------
+-------IA v11---------
 -------------------------
 -- OutputChannelConfig --
 ---- msgType = "SAY"; ---
@@ -47,8 +47,8 @@ interr:SetScript("OnEvent", function(self, event, ...)
                 destIcon = GetRaidIcon(destRaidFlags);
             end
 
-            local interruptingSpell = GetSpellLink(spellId);
-            local interruptedSpell = GetSpellLink(extraSpellID);
+            local interruptingSpell = C_Spell.GetSpellLink(spellId);
+            local interruptedSpell = C_Spell.GetSpellLink(extraSpellID);
             local msg = "";
 			if (IsInGroup()) then
                 msg = interruptingSpell.." interrupted "..destIcon..destName.."'s "..interruptedSpell.."!";

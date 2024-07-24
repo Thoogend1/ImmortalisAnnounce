@@ -1,8 +1,8 @@
-## Interface: 100206
+## Interface: 110000
 ## Author: Semuel
-## Version: 10.2.6
+## Version: 11.0.0
 ## Title: [Immortalis Announce]
-## Notes: [v10.2.6 Interrupt announce addon]
+## Notes: [v11 Interrupt announce addon]
 ## With many thanks to Kabandhur, Sherrim and Zelcandor for their work on previous versions
 
 ImmortalisAnnounce.lua
