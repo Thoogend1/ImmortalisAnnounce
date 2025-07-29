@@ -58,14 +58,18 @@ interr:SetScript("OnEvent", function(self, event, ...)
             end
 
             if (GetNumGroupMembers() > 0) then
-                local msgType = "PARTY";
-                if ((IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE)) and (InstanceType == "party" or InstanceType == "raid" or InstanceType == "scenario")) then -- Dungeon/Raid (Finder)/Scenario. 
+                if (IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE)) then
+                    if (InstanceType == "none")then
+                        msgType = "PARTY";
+                    elseif (InstanceType == "party" or InstanceType == "raid" or InstanceType == "scenario" or InstanceType == "delve" or InstanceType == "follower dungeon" or InstanceType == "story raid") then -- Dungeon/Raid (Finder)/Scenario. 
 					-- You can add InstanceType == "pvp" to include battlegrounds
-                    msgType = "INSTANCE_CHAT";
-                elseif (IsInRaid(LE_PARTY_CATEGORY_HOME)) then
+                    msgType = "INSTANCE_CHAT"; 
+                    elseif (IsInRaid(LE_PARTY_CATEGORY_HOME)) then
                     msgType = "RAID";
-                end
-
+                    else
+                    msgType = "PARTY";
+                    end
+                end    
                 SendChatMessage(msg, msgType); -- exception. Should logically never happen.
             else
                 DEFAULT_CHAT_FRAME:AddMessage(msg);
