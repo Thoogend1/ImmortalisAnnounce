@@ -6,25 +6,24 @@
 -------------------------
 
 local UnitGUID = UnitGUID;
-local IsInInstance = IsInInstance;
 local InstanceType = "none"
 
--- This maps the possible responses for GetRaidIcon to the right mark assigned to the player.
+local RAIDTARGET_MASK = 0x0000FF00;
 local RaidIconMaskToIndex =
 {
-	[COMBATLOG_OBJECT_RAIDTARGET1] = 1,
-	[COMBATLOG_OBJECT_RAIDTARGET2] = 2,
-	[COMBATLOG_OBJECT_RAIDTARGET3] = 3,
-	[COMBATLOG_OBJECT_RAIDTARGET4] = 4,
-	[COMBATLOG_OBJECT_RAIDTARGET5] = 5,
-	[COMBATLOG_OBJECT_RAIDTARGET6] = 6,
-	[COMBATLOG_OBJECT_RAIDTARGET7] = 7,
-	[COMBATLOG_OBJECT_RAIDTARGET8] = 8,
+	[0x00000100] = 1,
+	[0x00000200] = 2,
+	[0x00000400] = 3,
+	[0x00000800] = 4,
+	[0x00001000] = 5,
+	[0x00002000] = 6,
+	[0x00004000] = 7,
+	[0x00008000] = 8,
 };
 
 -- Get the appropriate icon for current raidTarget
 local function GetRaidIcon(unitFlags)
-	local raidTarget = bit.band(unitFlags, COMBATLOG_OBJECT_RAIDTARGET_MASK);
+	local raidTarget = bit.band(unitFlags, RAIDTARGET_MASK);
 	if (raidTarget == 0) then
 		return "";
 	end
@@ -76,7 +75,7 @@ interr:SetScript("OnEvent", function(self, event, ...)
             end
         end
     elseif (event == "PLAYER_ENTERING_WORLD") then
-        local _, iType = IsInInstance();
+        local _, iType = GetInstanceInfo();
         InstanceType = iType;
     end
 end);
